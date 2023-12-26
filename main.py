@@ -1,22 +1,17 @@
-from datetime import date
-import matplotlib.pyplot as plt
-import seaborn
-import pandas as pd
-import dataframe_image as dfi
-import re
-import matplotlib.ticker as mtick
-import matplotlib.dates as mdates
 import matplotlib.colors as mcolors
+import matplotlib.dates as mdates
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
+import pandas as pd
+import seaborn
 import statsmodels.api as sm
+import re
+
 
 # Utilities
 lowess = sm.nonparametric.lowess
 palette = seaborn.color_palette("deep")
 palette_hex = [mcolors.to_hex(color) for color in palette]
-
-
-index = pd.read_csv(f"./data/index.csv")
-
 
 def n(df):
     return df.shape[0]
@@ -31,10 +26,10 @@ def get_year(file):
         return 0
 
 
+index = pd.read_csv(f"./data/index.csv")
 stats = []
-stats_index = []
-upper = 65
-lower = 45
+upper = 24
+lower = 18
 
 for i, row in index.iterrows():
     print(row["File"])
@@ -74,6 +69,7 @@ for i, row in index.iterrows():
 df = pd.DataFrame(stats)
 df['date_numeric'] = (df['date'] - df['date'].min()).dt.days
 df = df.set_index('date')
+print(df)
 
 
 # Analysis
@@ -84,22 +80,12 @@ df = df.set_index('date')
 # print(model.summary())
 
 
-
-
+# Chart
 seaborn.set_theme()
 
-# Format the y-axis labels as percentages
-fmt = '{x:,.0%}'
-tick_formatter = mtick.StrMethodFormatter(fmt)
-
-
-print(df)
-
-# ax = seaborn.scatterplot(x='date', data=df)
-# ax = seaborn.scatterplot(x="date", y='female_id_male', data=df, label="Female ID as male")
-seaborn.scatterplot(x="date", y='female_id_none', data=df, label="Female ID as non-binary")
+ax = seaborn.scatterplot(x="date", y='female_id_none', data=df, label="Female ID as non-binary")
 seaborn.scatterplot(x="date", y='female_id_trans', data=df, label="Female ID as trans")
-ax = seaborn.scatterplot(x="date", y='female_id_male', data=df, label="Female ID as male")
+seaborn.scatterplot(x="date", y='female_id_male', data=df, label="Female ID as male")
 seaborn.scatterplot(x="date", y='male_id_none', data=df, label="Male ID as non-binary")
 seaborn.scatterplot(x="date", y='male_id_trans', data=df, label="Male ID as trans")
 seaborn.scatterplot(x="date", y='male_id_female', data=df, label="Male ID as female")
@@ -121,11 +107,9 @@ for i, point in enumerate(points):
     seaborn.lineplot(x="date", y=name, data=df, label=None, color=palette_hex[i])
 
 
+fmt = '{x:,.0%}'
+tick_formatter = mtick.StrMethodFormatter(fmt)
 
-ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=(1, 7)))
-ax.xaxis.set_major_formatter(mdates.ConciseDateFormatter(mdates.MonthLocator(bymonth=(1, 7))))
-
-# Custom formatter to display year only on the January tick
 def custom_date_formatter(x, pos=None):
     date = mdates.num2date(x)
     if date.month == 1:
@@ -133,36 +117,27 @@ def custom_date_formatter(x, pos=None):
     else:
         return ''
 
-ax.xaxis.set_major_formatter(plt.FuncFormatter(custom_date_formatter))
 
+ax.xaxis.set_major_formatter(plt.FuncFormatter(custom_date_formatter))
+ax.yaxis.set_major_formatter(tick_formatter)
+ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=(1, 7)))
+ax.yaxis.set_major_locator(mtick.MultipleLocator(0.01))
+ax.set_title(f"Trangender and non-binary identification in {lower} to {upper} year olds")
 
 plt.rc('font', size=12)  
 plt.ylabel("Prevalence")
 plt.xlabel(None)
-# plt.xlim(["2006-01-01", "2023-01-01"])
+plt.ylim([0, 0.09])
 plt.xlim([pd.to_datetime("2021-01-01"), pd.to_datetime("2024-01-01")])
 plt.legend(loc='upper left')
-
-
-
-
-
-
-# df1.style
-# dfi.export(df1, 'df_styled.png')
-
 
 plt.show()
 
 
+# Write results
+name = f"{lower}_{upper}_trans_id"
+df.to_csv(f"./results/{name}.csv", float_format="%.4f")
 
-
-# df.to_csv(f"./results/{name}.csv", float_format="%.4f")
-
-# # Table png
-# # percent = lambda x: "{:.2f}%".format(x*100)
-# # styled = df.style.format(percent)
-# # dfi.export(styled, f"results/{name}.png")
 
 
 
