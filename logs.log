@@ -1,0 +1,1919 @@
+2023-12-30 19:39:52,644:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 19:39:52,644:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 19:39:52,644:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 19:39:52,644:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 19:39:53,909:INFO:PyCaret ClassificationExperiment
+2023-12-30 19:39:53,909:INFO:Logging name: clf-default-name
+2023-12-30 19:39:53,909:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2023-12-30 19:39:53,909:INFO:version 3.2.0
+2023-12-30 19:39:53,909:INFO:Initializing setup()
+2023-12-30 19:39:53,909:INFO:self.USI: 8d5e
+2023-12-30 19:39:53,909:INFO:self._variable_keys: {'X_train', 'y', 'USI', 'fold_groups_param', 'target_param', 'gpu_n_jobs_param', 'X', 'html_param', 'exp_name_log', 'data', '_ml_usecase', 'logging_param', '_available_plots', 'memory', 'y_test', 'exp_id', 'log_plots_param', 'idx', 'y_train', 'is_multiclass', 'pipeline', 'gpu_param', 'fold_generator', 'n_jobs_param', 'X_test', 'fold_shuffle_param', 'fix_imbalance', 'seed'}
+2023-12-30 19:39:53,909:INFO:Checking environment
+2023-12-30 19:39:53,909:INFO:python_version: 3.9.4
+2023-12-30 19:39:53,909:INFO:python_build: ('default', 'Jan  7 2022 20:05:31')
+2023-12-30 19:39:53,909:INFO:machine: arm64
+2023-12-30 19:39:53,939:INFO:platform: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 19:39:53,940:INFO:Memory: svmem(total=17179869184, available=3792519168, percent=77.9, used=6420430848, free=71204864, active=3612426240, inactive=3684368384, wired=2808004608)
+2023-12-30 19:39:53,940:INFO:Physical Core: 10
+2023-12-30 19:39:53,940:INFO:Logical Core: 10
+2023-12-30 19:39:53,940:INFO:Checking libraries
+2023-12-30 19:39:53,940:INFO:System:
+2023-12-30 19:39:53,940:INFO:    python: 3.9.4 (default, Jan  7 2022, 20:05:31)  [Clang 13.0.0 (clang-1300.0.29.30)]
+2023-12-30 19:39:53,940:INFO:executable: /Users/admin/.pyenv/versions/3.9.4/bin/python
+2023-12-30 19:39:53,940:INFO:   machine: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 19:39:53,940:INFO:PyCaret required dependencies:
+2023-12-30 19:39:53,962:INFO:                 pip: 21.3.1
+2023-12-30 19:39:53,962:INFO:          setuptools: 49.2.1
+2023-12-30 19:39:53,962:INFO:             pycaret: 3.2.0
+2023-12-30 19:39:53,962:INFO:             IPython: 8.6.0
+2023-12-30 19:39:53,962:INFO:          ipywidgets: 8.1.1
+2023-12-30 19:39:53,962:INFO:                tqdm: 4.65.0
+2023-12-30 19:39:53,962:INFO:               numpy: 1.23.2
+2023-12-30 19:39:53,962:INFO:              pandas: 1.5.3
+2023-12-30 19:39:53,962:INFO:              jinja2: 3.1.2
+2023-12-30 19:39:53,962:INFO:               scipy: 1.10.1
+2023-12-30 19:39:53,962:INFO:              joblib: 1.3.2
+2023-12-30 19:39:53,962:INFO:             sklearn: 1.2.2
+2023-12-30 19:39:53,962:INFO:                pyod: 1.1.2
+2023-12-30 19:39:53,962:INFO:            imblearn: 0.11.0
+2023-12-30 19:39:53,962:INFO:   category_encoders: 2.6.3
+2023-12-30 19:39:53,962:INFO:            lightgbm: 4.2.0
+2023-12-30 19:39:53,962:INFO:               numba: 0.57.0
+2023-12-30 19:39:53,962:INFO:            requests: 2.28.1
+2023-12-30 19:39:53,962:INFO:          matplotlib: 3.6.0
+2023-12-30 19:39:53,962:INFO:          scikitplot: 0.3.7
+2023-12-30 19:39:53,962:INFO:         yellowbrick: 1.5
+2023-12-30 19:39:53,962:INFO:              plotly: 5.18.0
+2023-12-30 19:39:53,962:INFO:    plotly-resampler: Not installed
+2023-12-30 19:39:53,962:INFO:             kaleido: 0.2.1
+2023-12-30 19:39:53,962:INFO:           schemdraw: 0.15
+2023-12-30 19:39:53,962:INFO:         statsmodels: 0.14.0
+2023-12-30 19:39:53,962:INFO:              sktime: 0.21.1
+2023-12-30 19:39:53,962:INFO:               tbats: 1.1.3
+2023-12-30 19:39:53,962:INFO:            pmdarima: 2.0.4
+2023-12-30 19:39:53,962:INFO:              psutil: 5.9.3
+2023-12-30 19:39:53,962:INFO:          markupsafe: 2.1.1
+2023-12-30 19:39:53,962:INFO:             pickle5: Not installed
+2023-12-30 19:39:53,963:INFO:         cloudpickle: 3.0.0
+2023-12-30 19:39:53,963:INFO:         deprecation: 2.1.0
+2023-12-30 19:39:53,963:INFO:              xxhash: 3.4.1
+2023-12-30 19:39:53,963:INFO:           wurlitzer: 3.0.3
+2023-12-30 19:39:53,963:INFO:PyCaret optional dependencies:
+2023-12-30 19:39:53,968:INFO:                shap: Not installed
+2023-12-30 19:39:53,968:INFO:           interpret: Not installed
+2023-12-30 19:39:53,968:INFO:                umap: Not installed
+2023-12-30 19:39:53,968:INFO:     ydata_profiling: Not installed
+2023-12-30 19:39:53,968:INFO:  explainerdashboard: Not installed
+2023-12-30 19:39:53,968:INFO:             autoviz: Not installed
+2023-12-30 19:39:53,968:INFO:           fairlearn: Not installed
+2023-12-30 19:39:53,968:INFO:          deepchecks: Not installed
+2023-12-30 19:39:53,968:INFO:             xgboost: Not installed
+2023-12-30 19:39:53,968:INFO:            catboost: Not installed
+2023-12-30 19:39:53,968:INFO:              kmodes: Not installed
+2023-12-30 19:39:53,968:INFO:             mlxtend: Not installed
+2023-12-30 19:39:53,969:INFO:       statsforecast: Not installed
+2023-12-30 19:39:53,969:INFO:        tune_sklearn: Not installed
+2023-12-30 19:39:53,969:INFO:                 ray: Not installed
+2023-12-30 19:39:53,969:INFO:            hyperopt: Not installed
+2023-12-30 19:39:53,969:INFO:              optuna: Not installed
+2023-12-30 19:39:53,969:INFO:               skopt: Not installed
+2023-12-30 19:39:53,969:INFO:              mlflow: Not installed
+2023-12-30 19:39:53,969:INFO:              gradio: Not installed
+2023-12-30 19:39:53,969:INFO:             fastapi: Not installed
+2023-12-30 19:39:53,969:INFO:             uvicorn: Not installed
+2023-12-30 19:39:53,969:INFO:              m2cgen: Not installed
+2023-12-30 19:39:53,969:INFO:           evidently: Not installed
+2023-12-30 19:39:53,969:INFO:               fugue: Not installed
+2023-12-30 19:39:53,969:INFO:           streamlit: Not installed
+2023-12-30 19:39:53,969:INFO:             prophet: Not installed
+2023-12-30 19:39:53,969:INFO:None
+2023-12-30 19:39:53,969:INFO:Set up data.
+2023-12-30 19:39:54,185:INFO:Set up folding strategy.
+2023-12-30 19:39:54,185:INFO:Set up train/test split.
+2023-12-30 19:39:54,280:INFO:Set up index.
+2023-12-30 19:39:54,283:INFO:Assigning column types.
+2023-12-30 19:40:25,762:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 19:40:25,762:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 19:40:25,762:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 19:40:25,762:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 19:40:26,662:INFO:PyCaret ClassificationExperiment
+2023-12-30 19:40:26,662:INFO:Logging name: clf-default-name
+2023-12-30 19:40:26,662:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2023-12-30 19:40:26,662:INFO:version 3.2.0
+2023-12-30 19:40:26,663:INFO:Initializing setup()
+2023-12-30 19:40:26,663:INFO:self.USI: e8f3
+2023-12-30 19:40:26,663:INFO:self._variable_keys: {'html_param', 'idx', 'seed', 'logging_param', '_available_plots', 'fix_imbalance', 'data', 'X_train', 'gpu_param', 'X_test', 'pipeline', 'y', 'is_multiclass', 'gpu_n_jobs_param', 'log_plots_param', 'exp_id', 'fold_shuffle_param', 'y_test', 'target_param', 'fold_groups_param', 'n_jobs_param', 'memory', '_ml_usecase', 'fold_generator', 'X', 'USI', 'exp_name_log', 'y_train'}
+2023-12-30 19:40:26,663:INFO:Checking environment
+2023-12-30 19:40:26,663:INFO:python_version: 3.9.4
+2023-12-30 19:40:26,663:INFO:python_build: ('default', 'Jan  7 2022 20:05:31')
+2023-12-30 19:40:26,663:INFO:machine: arm64
+2023-12-30 19:40:26,689:INFO:platform: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 19:40:26,689:INFO:Memory: svmem(total=17179869184, available=3799138304, percent=77.9, used=6410420224, free=75513856, active=3872243712, inactive=3707813888, wired=2538176512)
+2023-12-30 19:40:26,689:INFO:Physical Core: 10
+2023-12-30 19:40:26,689:INFO:Logical Core: 10
+2023-12-30 19:40:26,689:INFO:Checking libraries
+2023-12-30 19:40:26,689:INFO:System:
+2023-12-30 19:40:26,689:INFO:    python: 3.9.4 (default, Jan  7 2022, 20:05:31)  [Clang 13.0.0 (clang-1300.0.29.30)]
+2023-12-30 19:40:26,689:INFO:executable: /Users/admin/.pyenv/versions/3.9.4/bin/python
+2023-12-30 19:40:26,689:INFO:   machine: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 19:40:26,689:INFO:PyCaret required dependencies:
+2023-12-30 19:40:26,706:INFO:                 pip: 21.3.1
+2023-12-30 19:40:26,706:INFO:          setuptools: 49.2.1
+2023-12-30 19:40:26,706:INFO:             pycaret: 3.2.0
+2023-12-30 19:40:26,706:INFO:             IPython: 8.6.0
+2023-12-30 19:40:26,706:INFO:          ipywidgets: 8.1.1
+2023-12-30 19:40:26,706:INFO:                tqdm: 4.65.0
+2023-12-30 19:40:26,706:INFO:               numpy: 1.23.2
+2023-12-30 19:40:26,706:INFO:              pandas: 1.5.3
+2023-12-30 19:40:26,706:INFO:              jinja2: 3.1.2
+2023-12-30 19:40:26,706:INFO:               scipy: 1.10.1
+2023-12-30 19:40:26,706:INFO:              joblib: 1.3.2
+2023-12-30 19:40:26,706:INFO:             sklearn: 1.2.2
+2023-12-30 19:40:26,706:INFO:                pyod: 1.1.2
+2023-12-30 19:40:26,706:INFO:            imblearn: 0.11.0
+2023-12-30 19:40:26,706:INFO:   category_encoders: 2.6.3
+2023-12-30 19:40:26,706:INFO:            lightgbm: 4.2.0
+2023-12-30 19:40:26,706:INFO:               numba: 0.57.0
+2023-12-30 19:40:26,706:INFO:            requests: 2.28.1
+2023-12-30 19:40:26,706:INFO:          matplotlib: 3.6.0
+2023-12-30 19:40:26,706:INFO:          scikitplot: 0.3.7
+2023-12-30 19:40:26,706:INFO:         yellowbrick: 1.5
+2023-12-30 19:40:26,706:INFO:              plotly: 5.18.0
+2023-12-30 19:40:26,706:INFO:    plotly-resampler: Not installed
+2023-12-30 19:40:26,706:INFO:             kaleido: 0.2.1
+2023-12-30 19:40:26,707:INFO:           schemdraw: 0.15
+2023-12-30 19:40:26,707:INFO:         statsmodels: 0.14.0
+2023-12-30 19:40:26,707:INFO:              sktime: 0.21.1
+2023-12-30 19:40:26,707:INFO:               tbats: 1.1.3
+2023-12-30 19:40:26,707:INFO:            pmdarima: 2.0.4
+2023-12-30 19:40:26,707:INFO:              psutil: 5.9.3
+2023-12-30 19:40:26,707:INFO:          markupsafe: 2.1.1
+2023-12-30 19:40:26,707:INFO:             pickle5: Not installed
+2023-12-30 19:40:26,707:INFO:         cloudpickle: 3.0.0
+2023-12-30 19:40:26,707:INFO:         deprecation: 2.1.0
+2023-12-30 19:40:26,707:INFO:              xxhash: 3.4.1
+2023-12-30 19:40:26,707:INFO:           wurlitzer: 3.0.3
+2023-12-30 19:40:26,707:INFO:PyCaret optional dependencies:
+2023-12-30 19:40:26,714:INFO:                shap: Not installed
+2023-12-30 19:40:26,714:INFO:           interpret: Not installed
+2023-12-30 19:40:26,714:INFO:                umap: Not installed
+2023-12-30 19:40:26,714:INFO:     ydata_profiling: Not installed
+2023-12-30 19:40:26,714:INFO:  explainerdashboard: Not installed
+2023-12-30 19:40:26,714:INFO:             autoviz: Not installed
+2023-12-30 19:40:26,714:INFO:           fairlearn: Not installed
+2023-12-30 19:40:26,715:INFO:          deepchecks: Not installed
+2023-12-30 19:40:26,715:INFO:             xgboost: Not installed
+2023-12-30 19:40:26,715:INFO:            catboost: Not installed
+2023-12-30 19:40:26,715:INFO:              kmodes: Not installed
+2023-12-30 19:40:26,715:INFO:             mlxtend: Not installed
+2023-12-30 19:40:26,715:INFO:       statsforecast: Not installed
+2023-12-30 19:40:26,715:INFO:        tune_sklearn: Not installed
+2023-12-30 19:40:26,715:INFO:                 ray: Not installed
+2023-12-30 19:40:26,715:INFO:            hyperopt: Not installed
+2023-12-30 19:40:26,715:INFO:              optuna: Not installed
+2023-12-30 19:40:26,715:INFO:               skopt: Not installed
+2023-12-30 19:40:26,715:INFO:              mlflow: Not installed
+2023-12-30 19:40:26,715:INFO:              gradio: Not installed
+2023-12-30 19:40:26,715:INFO:             fastapi: Not installed
+2023-12-30 19:40:26,715:INFO:             uvicorn: Not installed
+2023-12-30 19:40:26,715:INFO:              m2cgen: Not installed
+2023-12-30 19:40:26,715:INFO:           evidently: Not installed
+2023-12-30 19:40:26,715:INFO:               fugue: Not installed
+2023-12-30 19:40:26,715:INFO:           streamlit: Not installed
+2023-12-30 19:40:26,715:INFO:             prophet: Not installed
+2023-12-30 19:40:26,715:INFO:None
+2023-12-30 19:40:26,715:INFO:Set up data.
+2023-12-30 19:40:26,881:INFO:Set up folding strategy.
+2023-12-30 19:40:26,882:INFO:Set up train/test split.
+2023-12-30 19:40:26,982:INFO:Set up index.
+2023-12-30 19:40:26,985:INFO:Assigning column types.
+2023-12-30 19:40:27,034:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2023-12-30 19:40:27,054:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-12-30 19:40:27,056:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 19:40:27,072:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,072:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,092:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-12-30 19:40:27,092:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 19:40:27,105:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,105:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,105:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2023-12-30 19:40:27,125:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 19:40:27,137:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,138:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,158:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 19:40:27,170:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,170:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,170:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2023-12-30 19:40:27,203:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,203:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,236:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,236:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,238:INFO:Preparing preprocessing pipeline...
+2023-12-30 19:40:27,243:INFO:Set up label encoding.
+2023-12-30 19:40:27,243:INFO:Set up simple imputation.
+2023-12-30 19:40:27,289:INFO:Set up encoding of ordinal features.
+2023-12-30 19:40:27,647:INFO:Set up encoding of categorical features.
+2023-12-30 19:40:27,648:INFO:Set up feature selection.
+2023-12-30 19:40:27,680:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:27,681:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:35,132:INFO:Finished creating preprocessing pipeline.
+2023-12-30 19:40:35,416:INFO:Pipeline: Pipeline(memory=FastMemory(location=/var/folders/s1/rlnl0y2n1lx7qbyjpc6xfnnr0000gn/T/joblib),
+         steps=[('label_encoding',
+                 TransformerWrapperWithInverse(exclude=None, include=None,
+                                               transformer=LabelEncoder())),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['EEDUC', 'THHLD_NUMPER',
+                                             'THHLD_NUMKID', 'THHLD_NUMADLT',
+                                             'TENROLLPUB', 'TENROLLPRV',
+                                             'TENR...
+                                                                                         learning_rate=0.1,
+                                                                                         max_depth=-1,
+                                                                                         min_child_samples=20,
+                                                                                         min_child_weight=0.001,
+                                                                                         min_split_gain=0.0,
+                                                                                         n_estimators=100,
+                                                                                         n_jobs=None,
+                                                                                         num_leaves=31,
+                                                                                         objective=None,
+                                                                                         random_state=None,
+                                                                                         reg_alpha=0.0,
+                                                                                         reg_lambda=0.0,
+                                                                                         subsample=1.0,
+                                                                                         subsample_for_bin=200000,
+                                                                                         subsample_freq=0),
+                                                                importance_getter='auto',
+                                                                max_features=37,
+                                                                norm_order=1,
+                                                                prefit=False,
+                                                                threshold=-inf)))],
+         verbose=False)
+2023-12-30 19:40:35,416:INFO:Creating final display dataframe.
+2023-12-30 19:40:38,987:INFO:Setup _display_container:                     Description                                            Value
+0                    Session id                                              123
+1                        Target                             transgender_identity
+2                   Target type                                       Multiclass
+3                Target mapping  no: 0, non_binary_female: 1, trans_id_female: 2
+4           Original data shape                                     (41179, 204)
+5        Transformed data shape                                      (41179, 38)
+6   Transformed train set shape                                      (28825, 38)
+7    Transformed test set shape                                      (12354, 38)
+8               Ignore features                                               14
+9              Ordinal features                                               48
+10             Numeric features                                               24
+11         Categorical features                                              165
+12     Rows with missing values                                           100.0%
+13                   Preprocess                                             True
+14              Imputation type                                           simple
+15           Numeric imputation                                             mean
+16       Categorical imputation                                             mode
+17     Maximum one-hot encoding                                               25
+18              Encoding method                                             None
+19            Feature selection                                             True
+20     Feature selection method                                          classic
+21  Feature selection estimator                                         lightgbm
+22  Number of features selected                                              0.2
+23               Fold Generator                                  StratifiedKFold
+24                  Fold Number                                               10
+25                     CPU Jobs                                               -1
+26                      Use GPU                                            False
+27               Log Experiment                                            False
+28              Experiment Name                                 clf-default-name
+29                          USI                                             e8f3
+2023-12-30 19:40:39,024:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:39,025:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:39,058:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:39,058:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 19:40:39,059:INFO:setup() successfully completed in 12.41s...............
+2023-12-30 19:40:39,059:INFO:Initializing create_model()
+2023-12-30 19:40:39,059:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x102993070>, estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2023-12-30 19:40:39,059:INFO:Checking exceptions
+2023-12-30 19:40:39,081:INFO:Importing libraries
+2023-12-30 19:40:39,081:INFO:Copying training dataset
+2023-12-30 19:40:39,129:INFO:Defining folds
+2023-12-30 19:40:39,129:INFO:Declaring metric variables
+2023-12-30 19:40:39,129:INFO:Importing untrained model
+2023-12-30 19:40:39,129:INFO:Logistic Regression Imported successfully
+2023-12-30 19:40:39,130:INFO:Starting cross validation
+2023-12-30 19:40:39,152:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-12-30 19:41:09,346:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:09,604:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:10,157:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:10,178:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:10,189:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:10,200:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:10,433:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:10,444:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:10,450:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 19:41:10,454:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:10,868:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:10,870:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:10,881:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:10,887:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 19:41:10,891:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:10,959:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:10,976:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:11,284:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:11,394:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:11,481:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:11,485:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,495:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,501:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 19:41:11,505:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,550:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2023-12-30 19:41:11,579:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,589:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,595:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 19:41:11,599:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,636:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,646:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,652:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 19:41:11,656:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,829:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,839:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,845:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 19:41:11,849:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,944:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,953:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:11,959:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 19:41:11,963:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:12,008:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:12,017:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:12,022:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 19:41:12,026:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:12,056:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:12,066:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:12,072:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 19:41:12,076:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 19:41:12,196:INFO:Calculating mean and std
+2023-12-30 19:41:12,199:INFO:Creating metrics dataframe
+2023-12-30 19:41:12,203:INFO:Finalizing model
+2023-12-30 19:41:16,793:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2023-12-30 19:41:16,986:INFO:[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.010796 seconds.
+2023-12-30 19:41:16,986:INFO:You can set `force_row_wise=true` to remove the overhead.
+2023-12-30 19:41:16,986:INFO:And if memory is not enough, you can set `force_col_wise=true`.
+2023-12-30 19:41:16,986:INFO:[LightGBM] [Info] Total Bins 584
+2023-12-30 19:41:16,986:INFO:[LightGBM] [Info] Number of data points in the train set: 28825, number of used features: 189
+2023-12-30 19:41:16,987:INFO:[LightGBM] [Info] Start training from score -0.015136
+2023-12-30 19:41:16,987:INFO:[LightGBM] [Info] Start training from score -4.568555
+2023-12-30 19:41:16,987:INFO:[LightGBM] [Info] Start training from score -5.371159
+2023-12-30 19:41:40,213:INFO:Uploading results into container
+2023-12-30 19:41:40,214:INFO:Uploading model into container now
+2023-12-30 19:41:40,219:INFO:_master_model_container: 1
+2023-12-30 19:41:40,219:INFO:_display_container: 2
+2023-12-30 19:41:40,220:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2023-12-30 19:41:40,220:INFO:create_model() successfully completed......................................
+2023-12-30 19:41:40,293:INFO:Initializing get_config()
+2023-12-30 19:41:40,293:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x102993070>, variable=X_transformed)
+2023-12-30 19:41:40,629:INFO:Variable: X returned as        EST_ST  EST_MSA_47900.0  REGION_2.0  RRACE_1.0  RRACE_4.0  EEDUC  MS_3.0  ...  REMEMBERING  MOBILITY  ENERGY  HSE_TEMP  ENRGY_BILL  INCOME   age
+17125    53.0              0.0         0.0        1.0        0.0    4.0     1.0  ...          1.0       1.0     3.0       3.0         3.0     4.0  61.0
+31579    18.0              1.0         0.0        1.0        0.0    4.0     0.0  ...          0.0       1.0     3.0       3.0         3.0     4.0  49.0
+21616    36.0              0.0         0.0        1.0        0.0    6.0     0.0  ...          0.0       0.0     0.0       3.0         0.0     3.0  35.0
+64366    39.0              1.0         0.0        1.0        0.0    5.0     0.0  ...         -1.0      -1.0    -1.0      -1.0        -1.0    -1.0  30.0
+21566    39.0              1.0         0.0        0.0        1.0    2.0     0.0  ...          0.0       0.0     0.0       1.0         1.0     0.0  40.0
+...       ...              ...         ...        ...        ...    ...     ...  ...          ...       ...     ...       ...         ...     ...   ...
+31705    36.0              1.0         0.0        1.0        0.0    6.0     0.0  ...         -1.0      -1.0    -1.0      -1.0        -1.0    -1.0  48.0
+48064    45.0              1.0         1.0        0.0        0.0    3.0     0.0  ...          0.0       0.0     3.0       0.0         3.0     7.0  40.0
+45386     6.0              0.0         0.0        1.0        0.0    6.0     0.0  ...          0.0       0.0     3.0       3.0         3.0     5.0  76.0
+46717    53.0              0.0         0.0        1.0        0.0    3.0     0.0  ...         -1.0      -1.0    -1.0      -1.0        -1.0    -1.0  49.0
+17775     6.0              0.0         0.0        0.0        0.0    6.0     0.0  ...          1.0       1.0     3.0       3.0         3.0     7.0  42.0
+
+[41179 rows x 37 columns]
+2023-12-30 19:41:40,629:INFO:get_config() successfully completed......................................
+2023-12-30 20:02:13,100:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:02:13,100:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:02:13,100:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:02:13,100:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:03:02,354:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:03:02,355:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:03:02,355:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:03:02,355:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:03:04,417:INFO:PyCaret ClassificationExperiment
+2023-12-30 20:03:04,417:INFO:Logging name: clf-default-name
+2023-12-30 20:03:04,417:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2023-12-30 20:03:04,417:INFO:version 3.2.0
+2023-12-30 20:03:04,417:INFO:Initializing setup()
+2023-12-30 20:03:04,417:INFO:self.USI: b891
+2023-12-30 20:03:04,417:INFO:self._variable_keys: {'X_test', 'logging_param', 'fold_groups_param', 'fold_generator', 'X', 'gpu_n_jobs_param', 'html_param', 'gpu_param', '_ml_usecase', 'seed', 'fold_shuffle_param', 'y_train', 'pipeline', 'memory', 'USI', 'y_test', 'X_train', 'is_multiclass', 'n_jobs_param', 'target_param', 'exp_id', 'log_plots_param', 'idx', 'y', 'exp_name_log', '_available_plots', 'data', 'fix_imbalance'}
+2023-12-30 20:03:04,417:INFO:Checking environment
+2023-12-30 20:03:04,417:INFO:python_version: 3.9.4
+2023-12-30 20:03:04,417:INFO:python_build: ('default', 'Jan  7 2022 20:05:31')
+2023-12-30 20:03:04,417:INFO:machine: arm64
+2023-12-30 20:03:04,456:INFO:platform: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 20:03:04,456:INFO:Memory: svmem(total=17179869184, available=4421435392, percent=74.3, used=7062716416, free=45121536, active=4391665664, inactive=4367089664, wired=2671050752)
+2023-12-30 20:03:04,456:INFO:Physical Core: 10
+2023-12-30 20:03:04,456:INFO:Logical Core: 10
+2023-12-30 20:03:04,456:INFO:Checking libraries
+2023-12-30 20:03:04,456:INFO:System:
+2023-12-30 20:03:04,456:INFO:    python: 3.9.4 (default, Jan  7 2022, 20:05:31)  [Clang 13.0.0 (clang-1300.0.29.30)]
+2023-12-30 20:03:04,456:INFO:executable: /Users/admin/.pyenv/versions/3.9.4/bin/python
+2023-12-30 20:03:04,456:INFO:   machine: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 20:03:04,456:INFO:PyCaret required dependencies:
+2023-12-30 20:03:04,478:INFO:                 pip: 21.3.1
+2023-12-30 20:03:04,478:INFO:          setuptools: 49.2.1
+2023-12-30 20:03:04,478:INFO:             pycaret: 3.2.0
+2023-12-30 20:03:04,478:INFO:             IPython: 8.6.0
+2023-12-30 20:03:04,478:INFO:          ipywidgets: 8.1.1
+2023-12-30 20:03:04,478:INFO:                tqdm: 4.65.0
+2023-12-30 20:03:04,478:INFO:               numpy: 1.23.2
+2023-12-30 20:03:04,478:INFO:              pandas: 1.5.3
+2023-12-30 20:03:04,478:INFO:              jinja2: 3.1.2
+2023-12-30 20:03:04,478:INFO:               scipy: 1.10.1
+2023-12-30 20:03:04,478:INFO:              joblib: 1.3.2
+2023-12-30 20:03:04,478:INFO:             sklearn: 1.2.2
+2023-12-30 20:03:04,478:INFO:                pyod: 1.1.2
+2023-12-30 20:03:04,479:INFO:            imblearn: 0.11.0
+2023-12-30 20:03:04,479:INFO:   category_encoders: 2.6.3
+2023-12-30 20:03:04,479:INFO:            lightgbm: 4.2.0
+2023-12-30 20:03:04,479:INFO:               numba: 0.57.0
+2023-12-30 20:03:04,479:INFO:            requests: 2.28.1
+2023-12-30 20:03:04,479:INFO:          matplotlib: 3.6.0
+2023-12-30 20:03:04,479:INFO:          scikitplot: 0.3.7
+2023-12-30 20:03:04,479:INFO:         yellowbrick: 1.5
+2023-12-30 20:03:04,479:INFO:              plotly: 5.18.0
+2023-12-30 20:03:04,479:INFO:    plotly-resampler: Not installed
+2023-12-30 20:03:04,479:INFO:             kaleido: 0.2.1
+2023-12-30 20:03:04,479:INFO:           schemdraw: 0.15
+2023-12-30 20:03:04,479:INFO:         statsmodels: 0.14.0
+2023-12-30 20:03:04,479:INFO:              sktime: 0.21.1
+2023-12-30 20:03:04,479:INFO:               tbats: 1.1.3
+2023-12-30 20:03:04,479:INFO:            pmdarima: 2.0.4
+2023-12-30 20:03:04,479:INFO:              psutil: 5.9.3
+2023-12-30 20:03:04,479:INFO:          markupsafe: 2.1.1
+2023-12-30 20:03:04,479:INFO:             pickle5: Not installed
+2023-12-30 20:03:04,479:INFO:         cloudpickle: 3.0.0
+2023-12-30 20:03:04,479:INFO:         deprecation: 2.1.0
+2023-12-30 20:03:04,479:INFO:              xxhash: 3.4.1
+2023-12-30 20:03:04,479:INFO:           wurlitzer: 3.0.3
+2023-12-30 20:03:04,479:INFO:PyCaret optional dependencies:
+2023-12-30 20:03:04,486:INFO:                shap: Not installed
+2023-12-30 20:03:04,486:INFO:           interpret: Not installed
+2023-12-30 20:03:04,487:INFO:                umap: Not installed
+2023-12-30 20:03:04,487:INFO:     ydata_profiling: Not installed
+2023-12-30 20:03:04,487:INFO:  explainerdashboard: Not installed
+2023-12-30 20:03:04,487:INFO:             autoviz: Not installed
+2023-12-30 20:03:04,487:INFO:           fairlearn: Not installed
+2023-12-30 20:03:04,487:INFO:          deepchecks: Not installed
+2023-12-30 20:03:04,487:INFO:             xgboost: Not installed
+2023-12-30 20:03:04,487:INFO:            catboost: Not installed
+2023-12-30 20:03:04,487:INFO:              kmodes: Not installed
+2023-12-30 20:03:04,487:INFO:             mlxtend: Not installed
+2023-12-30 20:03:04,487:INFO:       statsforecast: Not installed
+2023-12-30 20:03:04,487:INFO:        tune_sklearn: Not installed
+2023-12-30 20:03:04,487:INFO:                 ray: Not installed
+2023-12-30 20:03:04,487:INFO:            hyperopt: Not installed
+2023-12-30 20:03:04,487:INFO:              optuna: Not installed
+2023-12-30 20:03:04,487:INFO:               skopt: Not installed
+2023-12-30 20:03:04,487:INFO:              mlflow: Not installed
+2023-12-30 20:03:04,487:INFO:              gradio: Not installed
+2023-12-30 20:03:04,487:INFO:             fastapi: Not installed
+2023-12-30 20:03:04,487:INFO:             uvicorn: Not installed
+2023-12-30 20:03:04,487:INFO:              m2cgen: Not installed
+2023-12-30 20:03:04,487:INFO:           evidently: Not installed
+2023-12-30 20:03:04,487:INFO:               fugue: Not installed
+2023-12-30 20:03:04,487:INFO:           streamlit: Not installed
+2023-12-30 20:03:04,487:INFO:             prophet: Not installed
+2023-12-30 20:03:04,487:INFO:None
+2023-12-30 20:03:04,487:INFO:Set up data.
+2023-12-30 20:03:04,646:INFO:Set up folding strategy.
+2023-12-30 20:03:04,647:INFO:Set up train/test split.
+2023-12-30 20:03:04,737:INFO:Set up index.
+2023-12-30 20:03:04,740:INFO:Assigning column types.
+2023-12-30 20:03:04,763:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2023-12-30 20:03:04,783:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-12-30 20:03:04,785:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:03:04,802:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,802:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,823:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-12-30 20:03:04,823:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:03:04,836:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,836:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,836:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2023-12-30 20:03:04,856:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:03:04,869:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,869:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,889:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:03:04,901:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,902:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,902:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2023-12-30 20:03:04,934:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,934:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,968:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,968:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:04,970:INFO:Preparing preprocessing pipeline...
+2023-12-30 20:03:04,973:INFO:Set up label encoding.
+2023-12-30 20:03:04,973:INFO:Set up simple imputation.
+2023-12-30 20:03:04,991:INFO:Set up encoding of ordinal features.
+2023-12-30 20:03:05,100:INFO:Set up encoding of categorical features.
+2023-12-30 20:03:05,100:INFO:Set up feature selection.
+2023-12-30 20:03:05,133:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:05,133:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:08,001:INFO:Finished creating preprocessing pipeline.
+2023-12-30 20:03:08,230:INFO:Pipeline: Pipeline(memory=FastMemory(location=/var/folders/s1/rlnl0y2n1lx7qbyjpc6xfnnr0000gn/T/joblib),
+         steps=[('label_encoding',
+                 TransformerWrapperWithInverse(exclude=None, include=None,
+                                               transformer=LabelEncoder())),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['EEDUC', 'THHLD_NUMPER',
+                                             'THHLD_NUMKID', 'THHLD_NUMADLT',
+                                             'TENROLLPUB', 'TENROLLPRV',
+                                             'TENR...
+                                                                                         learning_rate=0.1,
+                                                                                         max_depth=-1,
+                                                                                         min_child_samples=20,
+                                                                                         min_child_weight=0.001,
+                                                                                         min_split_gain=0.0,
+                                                                                         n_estimators=100,
+                                                                                         n_jobs=None,
+                                                                                         num_leaves=31,
+                                                                                         objective=None,
+                                                                                         random_state=None,
+                                                                                         reg_alpha=0.0,
+                                                                                         reg_lambda=0.0,
+                                                                                         subsample=1.0,
+                                                                                         subsample_for_bin=200000,
+                                                                                         subsample_freq=0),
+                                                                importance_getter='auto',
+                                                                max_features=14,
+                                                                norm_order=1,
+                                                                prefit=False,
+                                                                threshold=-inf)))],
+         verbose=False)
+2023-12-30 20:03:08,230:INFO:Creating final display dataframe.
+2023-12-30 20:03:09,700:INFO:Setup _display_container:                     Description                                            Value
+0                    Session id                                              123
+1                        Target                             transgender_identity
+2                   Target type                                       Multiclass
+3                Target mapping  no: 0, non_binary_female: 1, trans_id_female: 2
+4           Original data shape                                     (38566, 204)
+5        Transformed data shape                                      (38566, 15)
+6   Transformed train set shape                                      (26996, 15)
+7    Transformed test set shape                                      (11570, 15)
+8               Ignore features                                              133
+9              Ordinal features                                               32
+10             Numeric features                                               24
+11         Categorical features                                               46
+12     Rows with missing values                                           100.0%
+13                   Preprocess                                             True
+14              Imputation type                                           simple
+15           Numeric imputation                                             mean
+16       Categorical imputation                                             mode
+17     Maximum one-hot encoding                                               25
+18              Encoding method                                             None
+19            Feature selection                                             True
+20     Feature selection method                                          classic
+21  Feature selection estimator                                         lightgbm
+22  Number of features selected                                              0.2
+23               Fold Generator                                  StratifiedKFold
+24                  Fold Number                                               10
+25                     CPU Jobs                                               -1
+26                      Use GPU                                            False
+27               Log Experiment                                            False
+28              Experiment Name                                 clf-default-name
+29                          USI                                             b891
+2023-12-30 20:03:09,737:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:09,737:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:09,771:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:09,771:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:03:09,772:INFO:setup() successfully completed in 5.38s...............
+2023-12-30 20:03:09,772:INFO:Initializing create_model()
+2023-12-30 20:03:09,772:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x16a890df0>, estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2023-12-30 20:03:09,772:INFO:Checking exceptions
+2023-12-30 20:03:09,789:INFO:Importing libraries
+2023-12-30 20:03:09,789:INFO:Copying training dataset
+2023-12-30 20:03:09,807:INFO:Defining folds
+2023-12-30 20:03:09,807:INFO:Declaring metric variables
+2023-12-30 20:03:09,807:INFO:Importing untrained model
+2023-12-30 20:03:09,807:INFO:Logistic Regression Imported successfully
+2023-12-30 20:03:09,808:INFO:Starting cross validation
+2023-12-30 20:03:09,825:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-12-30 20:03:28,343:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,355:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,365:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,374:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:28,375:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,379:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,385:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:28,390:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,409:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,440:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,446:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:28,452:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,552:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,562:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,568:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:28,574:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,579:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,584:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,590:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:28,594:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,612:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,622:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,628:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:28,632:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,692:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,702:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,708:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:28,712:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,789:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,799:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:28,804:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:28,808:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:29,496:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:29,505:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:29,510:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:29,514:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:29,576:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:29,586:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:29,591:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:03:29,595:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:03:29,712:INFO:Calculating mean and std
+2023-12-30 20:03:29,714:INFO:Creating metrics dataframe
+2023-12-30 20:03:29,718:INFO:Finalizing model
+2023-12-30 20:03:30,563:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2023-12-30 20:03:30,658:INFO:[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.007710 seconds.
+2023-12-30 20:03:30,658:INFO:You can set `force_row_wise=true` to remove the overhead.
+2023-12-30 20:03:30,658:INFO:And if memory is not enough, you can set `force_col_wise=true`.
+2023-12-30 20:03:30,658:INFO:[LightGBM] [Info] Total Bins 480
+2023-12-30 20:03:30,659:INFO:[LightGBM] [Info] Number of data points in the train set: 26996, number of used features: 137
+2023-12-30 20:03:30,659:INFO:[LightGBM] [Info] Start training from score -0.016697
+2023-12-30 20:03:30,659:INFO:[LightGBM] [Info] Start training from score -4.435123
+2023-12-30 20:03:30,659:INFO:[LightGBM] [Info] Start training from score -5.359257
+2023-12-30 20:03:37,749:INFO:Uploading results into container
+2023-12-30 20:03:37,751:INFO:Uploading model into container now
+2023-12-30 20:03:37,756:INFO:_master_model_container: 1
+2023-12-30 20:03:37,756:INFO:_display_container: 2
+2023-12-30 20:03:37,756:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2023-12-30 20:03:37,756:INFO:create_model() successfully completed......................................
+2023-12-30 20:03:37,866:INFO:Initializing get_config()
+2023-12-30 20:03:37,866:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x16a890df0>, variable=X_transformed)
+2023-12-30 20:03:38,026:INFO:Variable: X returned as        EST_ST  EEDUC  THHLD_NUMPER  THHLD_NUMKID  THHLD_NUMADLT  CURFOODSUF  ANXIOUS  WORRY  INTEREST  DOWN  SEEING  ENERGY  INCOME   age
+20085    55.0    3.0           2.0           0.0            2.0         2.0      2.0    2.0       0.0   1.0     1.0     2.0     3.0  60.0
+52039     8.0    6.0           3.0           0.0            3.0         0.0      0.0    0.0       0.0   0.0     0.0     3.0     7.0  60.0
+37670    41.0    5.0           7.0           2.0            5.0         0.0      0.0    0.0       0.0   0.0     0.0     3.0     3.0  54.0
+2213     47.0    3.0           5.0           3.0            2.0         1.0      1.0    1.0       1.0   1.0     0.0     1.0     4.0  43.0
+20177    45.0    6.0           1.0           0.0            1.0         0.0      0.0    0.0       2.0   1.0     0.0     3.0     2.0  71.0
+...       ...    ...           ...           ...            ...         ...      ...    ...       ...   ...     ...     ...     ...   ...
+49931     4.0    6.0           1.0           0.0            1.0         0.0      1.0    0.0       0.0   0.0     1.0     3.0     3.0  62.0
+14831    34.0    5.0           2.0           0.0            2.0         0.0      1.0    1.0       1.0   1.0     0.0     3.0     5.0  40.0
+26123    13.0    3.0           1.0           0.0            1.0         0.0      1.0    1.0       1.0   0.0     1.0     3.0     0.0  65.0
+12916    55.0    6.0           1.0           0.0            1.0         0.0      1.0    1.0       0.0   0.0     0.0     1.0     3.0  57.0
+4148     47.0    3.0           2.0           0.0            2.0         0.0      2.0    3.0       1.0   2.0     1.0     2.0     5.0  41.0
+
+[38566 rows x 14 columns]
+2023-12-30 20:03:38,026:INFO:get_config() successfully completed......................................
+2023-12-30 20:04:30,830:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:04:30,830:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:04:30,830:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:04:30,830:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:04:32,912:INFO:PyCaret ClassificationExperiment
+2023-12-30 20:04:32,912:INFO:Logging name: clf-default-name
+2023-12-30 20:04:32,913:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2023-12-30 20:04:32,913:INFO:version 3.2.0
+2023-12-30 20:04:32,913:INFO:Initializing setup()
+2023-12-30 20:04:32,913:INFO:self.USI: 83ab
+2023-12-30 20:04:32,913:INFO:self._variable_keys: {'USI', 'log_plots_param', 'y_test', 'X', 'X_train', 'n_jobs_param', 'memory', 'exp_id', 'idx', 'y_train', 'is_multiclass', 'logging_param', 'X_test', 'target_param', '_available_plots', 'pipeline', 'html_param', '_ml_usecase', 'gpu_param', 'y', 'fold_generator', 'gpu_n_jobs_param', 'fold_shuffle_param', 'exp_name_log', 'fold_groups_param', 'seed', 'fix_imbalance', 'data'}
+2023-12-30 20:04:32,913:INFO:Checking environment
+2023-12-30 20:04:32,913:INFO:python_version: 3.9.4
+2023-12-30 20:04:32,913:INFO:python_build: ('default', 'Jan  7 2022 20:05:31')
+2023-12-30 20:04:32,913:INFO:machine: arm64
+2023-12-30 20:04:32,949:INFO:platform: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 20:04:32,949:INFO:Memory: svmem(total=17179869184, available=4261888000, percent=75.2, used=6626770944, free=239763456, active=3818307584, inactive=3850223616, wired=2808463360)
+2023-12-30 20:04:32,949:INFO:Physical Core: 10
+2023-12-30 20:04:32,949:INFO:Logical Core: 10
+2023-12-30 20:04:32,949:INFO:Checking libraries
+2023-12-30 20:04:32,949:INFO:System:
+2023-12-30 20:04:32,949:INFO:    python: 3.9.4 (default, Jan  7 2022, 20:05:31)  [Clang 13.0.0 (clang-1300.0.29.30)]
+2023-12-30 20:04:32,949:INFO:executable: /Users/admin/.pyenv/versions/3.9.4/bin/python
+2023-12-30 20:04:32,949:INFO:   machine: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 20:04:32,949:INFO:PyCaret required dependencies:
+2023-12-30 20:04:32,968:INFO:                 pip: 21.3.1
+2023-12-30 20:04:32,969:INFO:          setuptools: 49.2.1
+2023-12-30 20:04:32,969:INFO:             pycaret: 3.2.0
+2023-12-30 20:04:32,969:INFO:             IPython: 8.6.0
+2023-12-30 20:04:32,969:INFO:          ipywidgets: 8.1.1
+2023-12-30 20:04:32,969:INFO:                tqdm: 4.65.0
+2023-12-30 20:04:32,969:INFO:               numpy: 1.23.2
+2023-12-30 20:04:32,969:INFO:              pandas: 1.5.3
+2023-12-30 20:04:32,969:INFO:              jinja2: 3.1.2
+2023-12-30 20:04:32,969:INFO:               scipy: 1.10.1
+2023-12-30 20:04:32,969:INFO:              joblib: 1.3.2
+2023-12-30 20:04:32,969:INFO:             sklearn: 1.2.2
+2023-12-30 20:04:32,969:INFO:                pyod: 1.1.2
+2023-12-30 20:04:32,969:INFO:            imblearn: 0.11.0
+2023-12-30 20:04:32,969:INFO:   category_encoders: 2.6.3
+2023-12-30 20:04:32,969:INFO:            lightgbm: 4.2.0
+2023-12-30 20:04:32,969:INFO:               numba: 0.57.0
+2023-12-30 20:04:32,969:INFO:            requests: 2.28.1
+2023-12-30 20:04:32,969:INFO:          matplotlib: 3.6.0
+2023-12-30 20:04:32,969:INFO:          scikitplot: 0.3.7
+2023-12-30 20:04:32,969:INFO:         yellowbrick: 1.5
+2023-12-30 20:04:32,969:INFO:              plotly: 5.18.0
+2023-12-30 20:04:32,969:INFO:    plotly-resampler: Not installed
+2023-12-30 20:04:32,969:INFO:             kaleido: 0.2.1
+2023-12-30 20:04:32,969:INFO:           schemdraw: 0.15
+2023-12-30 20:04:32,969:INFO:         statsmodels: 0.14.0
+2023-12-30 20:04:32,969:INFO:              sktime: 0.21.1
+2023-12-30 20:04:32,969:INFO:               tbats: 1.1.3
+2023-12-30 20:04:32,969:INFO:            pmdarima: 2.0.4
+2023-12-30 20:04:32,969:INFO:              psutil: 5.9.3
+2023-12-30 20:04:32,969:INFO:          markupsafe: 2.1.1
+2023-12-30 20:04:32,969:INFO:             pickle5: Not installed
+2023-12-30 20:04:32,969:INFO:         cloudpickle: 3.0.0
+2023-12-30 20:04:32,969:INFO:         deprecation: 2.1.0
+2023-12-30 20:04:32,969:INFO:              xxhash: 3.4.1
+2023-12-30 20:04:32,969:INFO:           wurlitzer: 3.0.3
+2023-12-30 20:04:32,969:INFO:PyCaret optional dependencies:
+2023-12-30 20:04:32,976:INFO:                shap: Not installed
+2023-12-30 20:04:32,976:INFO:           interpret: Not installed
+2023-12-30 20:04:32,976:INFO:                umap: Not installed
+2023-12-30 20:04:32,976:INFO:     ydata_profiling: Not installed
+2023-12-30 20:04:32,976:INFO:  explainerdashboard: Not installed
+2023-12-30 20:04:32,976:INFO:             autoviz: Not installed
+2023-12-30 20:04:32,976:INFO:           fairlearn: Not installed
+2023-12-30 20:04:32,976:INFO:          deepchecks: Not installed
+2023-12-30 20:04:32,976:INFO:             xgboost: Not installed
+2023-12-30 20:04:32,976:INFO:            catboost: Not installed
+2023-12-30 20:04:32,976:INFO:              kmodes: Not installed
+2023-12-30 20:04:32,976:INFO:             mlxtend: Not installed
+2023-12-30 20:04:32,976:INFO:       statsforecast: Not installed
+2023-12-30 20:04:32,976:INFO:        tune_sklearn: Not installed
+2023-12-30 20:04:32,976:INFO:                 ray: Not installed
+2023-12-30 20:04:32,976:INFO:            hyperopt: Not installed
+2023-12-30 20:04:32,976:INFO:              optuna: Not installed
+2023-12-30 20:04:32,976:INFO:               skopt: Not installed
+2023-12-30 20:04:32,977:INFO:              mlflow: Not installed
+2023-12-30 20:04:32,977:INFO:              gradio: Not installed
+2023-12-30 20:04:32,977:INFO:             fastapi: Not installed
+2023-12-30 20:04:32,977:INFO:             uvicorn: Not installed
+2023-12-30 20:04:32,977:INFO:              m2cgen: Not installed
+2023-12-30 20:04:32,977:INFO:           evidently: Not installed
+2023-12-30 20:04:32,977:INFO:               fugue: Not installed
+2023-12-30 20:04:32,977:INFO:           streamlit: Not installed
+2023-12-30 20:04:32,977:INFO:             prophet: Not installed
+2023-12-30 20:04:32,977:INFO:None
+2023-12-30 20:04:32,977:INFO:Set up data.
+2023-12-30 20:04:33,107:INFO:Set up folding strategy.
+2023-12-30 20:04:33,107:INFO:Set up train/test split.
+2023-12-30 20:04:33,165:INFO:Set up index.
+2023-12-30 20:04:33,166:INFO:Assigning column types.
+2023-12-30 20:04:33,188:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2023-12-30 20:04:33,208:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-12-30 20:04:33,210:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:04:33,226:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,226:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,246:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-12-30 20:04:33,247:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:04:33,259:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,259:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,259:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2023-12-30 20:04:33,279:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:04:33,292:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,292:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,312:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:04:33,325:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,325:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,325:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2023-12-30 20:04:33,358:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,358:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,392:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,392:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,394:INFO:Preparing preprocessing pipeline...
+2023-12-30 20:04:33,396:INFO:Set up label encoding.
+2023-12-30 20:04:33,396:INFO:Set up simple imputation.
+2023-12-30 20:04:33,414:INFO:Set up encoding of ordinal features.
+2023-12-30 20:04:33,514:INFO:Set up encoding of categorical features.
+2023-12-30 20:04:33,515:INFO:Set up feature selection.
+2023-12-30 20:04:33,548:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:33,548:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:34,286:INFO:Finished creating preprocessing pipeline.
+2023-12-30 20:04:34,512:INFO:Pipeline: Pipeline(memory=FastMemory(location=/var/folders/s1/rlnl0y2n1lx7qbyjpc6xfnnr0000gn/T/joblib),
+         steps=[('label_encoding',
+                 TransformerWrapperWithInverse(exclude=None, include=None,
+                                               transformer=LabelEncoder())),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['EEDUC', 'THHLD_NUMPER',
+                                             'THHLD_NUMKID', 'THHLD_NUMADLT',
+                                             'TENROLLPUB', 'TENROLLPRV',
+                                             'TENR...
+                                                                                         learning_rate=0.1,
+                                                                                         max_depth=-1,
+                                                                                         min_child_samples=20,
+                                                                                         min_child_weight=0.001,
+                                                                                         min_split_gain=0.0,
+                                                                                         n_estimators=100,
+                                                                                         n_jobs=None,
+                                                                                         num_leaves=31,
+                                                                                         objective=None,
+                                                                                         random_state=None,
+                                                                                         reg_alpha=0.0,
+                                                                                         reg_lambda=0.0,
+                                                                                         subsample=1.0,
+                                                                                         subsample_for_bin=200000,
+                                                                                         subsample_freq=0),
+                                                                importance_getter='auto',
+                                                                max_features=14,
+                                                                norm_order=1,
+                                                                prefit=False,
+                                                                threshold=-inf)))],
+         verbose=False)
+2023-12-30 20:04:34,512:INFO:Creating final display dataframe.
+2023-12-30 20:04:35,693:INFO:Setup _display_container:                     Description                                            Value
+0                    Session id                                              123
+1                        Target                             transgender_identity
+2                   Target type                                       Multiclass
+3                Target mapping  no: 0, non_binary_female: 1, trans_id_female: 2
+4           Original data shape                                     (38566, 204)
+5        Transformed data shape                                      (38566, 15)
+6   Transformed train set shape                                      (26996, 15)
+7    Transformed test set shape                                      (11570, 15)
+8               Ignore features                                              133
+9              Ordinal features                                               32
+10             Numeric features                                               24
+11         Categorical features                                               46
+12     Rows with missing values                                           100.0%
+13                   Preprocess                                             True
+14              Imputation type                                           simple
+15           Numeric imputation                                             mean
+16       Categorical imputation                                             mode
+17     Maximum one-hot encoding                                               25
+18              Encoding method                                             None
+19            Feature selection                                             True
+20     Feature selection method                                          classic
+21  Feature selection estimator                                         lightgbm
+22  Number of features selected                                              0.2
+23               Fold Generator                                  StratifiedKFold
+24                  Fold Number                                               10
+25                     CPU Jobs                                               -1
+26                      Use GPU                                            False
+27               Log Experiment                                            False
+28              Experiment Name                                 clf-default-name
+29                          USI                                             83ab
+2023-12-30 20:04:35,732:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:35,733:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:35,765:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:35,766:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:04:35,766:INFO:setup() successfully completed in 2.86s...............
+2023-12-30 20:04:35,766:INFO:Initializing create_model()
+2023-12-30 20:04:35,766:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x157104f40>, estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2023-12-30 20:04:35,766:INFO:Checking exceptions
+2023-12-30 20:04:35,785:INFO:Importing libraries
+2023-12-30 20:04:35,785:INFO:Copying training dataset
+2023-12-30 20:04:35,803:INFO:Defining folds
+2023-12-30 20:04:35,803:INFO:Declaring metric variables
+2023-12-30 20:04:35,803:INFO:Importing untrained model
+2023-12-30 20:04:35,803:INFO:Logistic Regression Imported successfully
+2023-12-30 20:04:35,803:INFO:Starting cross validation
+2023-12-30 20:04:35,819:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-12-30 20:04:54,772:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:54,782:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:54,798:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:54,802:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:54,863:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:54,883:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:54,889:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:54,894:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:54,957:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:54,986:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:54,991:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:54,996:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,012:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,020:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,024:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,030:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:55,032:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,038:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,041:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:55,045:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,052:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,063:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,066:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,077:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,078:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:55,082:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,084:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:55,088:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,194:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,204:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,209:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:55,213:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,229:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,239:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,245:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:55,249:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,260:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,270:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,275:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:04:55,279:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:04:55,405:INFO:Calculating mean and std
+2023-12-30 20:04:55,406:INFO:Creating metrics dataframe
+2023-12-30 20:04:55,410:INFO:Finalizing model
+2023-12-30 20:04:56,190:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2023-12-30 20:04:56,301:INFO:[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.008295 seconds.
+2023-12-30 20:04:56,301:INFO:You can set `force_row_wise=true` to remove the overhead.
+2023-12-30 20:04:56,301:INFO:And if memory is not enough, you can set `force_col_wise=true`.
+2023-12-30 20:04:56,301:INFO:[LightGBM] [Info] Total Bins 480
+2023-12-30 20:04:56,301:INFO:[LightGBM] [Info] Number of data points in the train set: 26996, number of used features: 137
+2023-12-30 20:04:56,301:INFO:[LightGBM] [Info] Start training from score -0.016697
+2023-12-30 20:04:56,301:INFO:[LightGBM] [Info] Start training from score -4.435123
+2023-12-30 20:04:56,302:INFO:[LightGBM] [Info] Start training from score -5.359257
+2023-12-30 20:05:03,584:INFO:Uploading results into container
+2023-12-30 20:05:03,585:INFO:Uploading model into container now
+2023-12-30 20:05:03,590:INFO:_master_model_container: 1
+2023-12-30 20:05:03,590:INFO:_display_container: 2
+2023-12-30 20:05:03,591:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2023-12-30 20:05:03,591:INFO:create_model() successfully completed......................................
+2023-12-30 20:05:03,682:INFO:Initializing get_config()
+2023-12-30 20:05:03,682:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x157104f40>, variable=X_transformed)
+2023-12-30 20:05:03,850:INFO:Variable: X returned as        EST_ST  EEDUC  THHLD_NUMPER  THHLD_NUMKID  THHLD_NUMADLT  CURFOODSUF  ANXIOUS  WORRY  INTEREST  DOWN  SEEING  ENERGY  INCOME   age
+20085    55.0    3.0           2.0           0.0            2.0         2.0      2.0    2.0       0.0   1.0     1.0     2.0     3.0  60.0
+52039     8.0    6.0           3.0           0.0            3.0         0.0      0.0    0.0       0.0   0.0     0.0     3.0     7.0  60.0
+37670    41.0    5.0           7.0           2.0            5.0         0.0      0.0    0.0       0.0   0.0     0.0     3.0     3.0  54.0
+2213     47.0    3.0           5.0           3.0            2.0         1.0      1.0    1.0       1.0   1.0     0.0     1.0     4.0  43.0
+20177    45.0    6.0           1.0           0.0            1.0         0.0      0.0    0.0       2.0   1.0     0.0     3.0     2.0  71.0
+...       ...    ...           ...           ...            ...         ...      ...    ...       ...   ...     ...     ...     ...   ...
+49931     4.0    6.0           1.0           0.0            1.0         0.0      1.0    0.0       0.0   0.0     1.0     3.0     3.0  62.0
+14831    34.0    5.0           2.0           0.0            2.0         0.0      1.0    1.0       1.0   1.0     0.0     3.0     5.0  40.0
+26123    13.0    3.0           1.0           0.0            1.0         0.0      1.0    1.0       1.0   0.0     1.0     3.0     0.0  65.0
+12916    55.0    6.0           1.0           0.0            1.0         0.0      1.0    1.0       0.0   0.0     0.0     1.0     3.0  57.0
+4148     47.0    3.0           2.0           0.0            2.0         0.0      2.0    3.0       1.0   2.0     1.0     2.0     5.0  41.0
+
+[38566 rows x 14 columns]
+2023-12-30 20:05:03,850:INFO:get_config() successfully completed......................................
+2023-12-30 20:14:41,051:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:14:41,051:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:14:41,051:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:14:41,051:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-12-30 20:14:43,559:INFO:PyCaret ClassificationExperiment
+2023-12-30 20:14:43,559:INFO:Logging name: clf-default-name
+2023-12-30 20:14:43,559:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2023-12-30 20:14:43,559:INFO:version 3.2.0
+2023-12-30 20:14:43,559:INFO:Initializing setup()
+2023-12-30 20:14:43,559:INFO:self.USI: 63b2
+2023-12-30 20:14:43,559:INFO:self._variable_keys: {'X_test', 'X', 'fold_groups_param', 'logging_param', '_ml_usecase', 'fold_shuffle_param', 'html_param', 'X_train', 'y', 'n_jobs_param', 'data', 'gpu_param', 'fix_imbalance', 'exp_name_log', 'y_train', 'seed', 'idx', 'y_test', '_available_plots', 'is_multiclass', 'pipeline', 'gpu_n_jobs_param', 'log_plots_param', 'memory', 'USI', 'exp_id', 'target_param', 'fold_generator'}
+2023-12-30 20:14:43,559:INFO:Checking environment
+2023-12-30 20:14:43,559:INFO:python_version: 3.9.4
+2023-12-30 20:14:43,559:INFO:python_build: ('default', 'Jan  7 2022 20:05:31')
+2023-12-30 20:14:43,559:INFO:machine: arm64
+2023-12-30 20:14:43,599:INFO:platform: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 20:14:43,600:INFO:Memory: svmem(total=17179869184, available=4093902848, percent=76.2, used=6582304768, free=299499520, active=3803103232, inactive=3721969664, wired=2779201536)
+2023-12-30 20:14:43,600:INFO:Physical Core: 10
+2023-12-30 20:14:43,600:INFO:Logical Core: 10
+2023-12-30 20:14:43,600:INFO:Checking libraries
+2023-12-30 20:14:43,600:INFO:System:
+2023-12-30 20:14:43,600:INFO:    python: 3.9.4 (default, Jan  7 2022, 20:05:31)  [Clang 13.0.0 (clang-1300.0.29.30)]
+2023-12-30 20:14:43,600:INFO:executable: /Users/admin/.pyenv/versions/3.9.4/bin/python
+2023-12-30 20:14:43,600:INFO:   machine: macOS-14.1.2-arm64-arm-64bit
+2023-12-30 20:14:43,600:INFO:PyCaret required dependencies:
+2023-12-30 20:14:43,621:INFO:                 pip: 21.3.1
+2023-12-30 20:14:43,621:INFO:          setuptools: 49.2.1
+2023-12-30 20:14:43,621:INFO:             pycaret: 3.2.0
+2023-12-30 20:14:43,621:INFO:             IPython: 8.6.0
+2023-12-30 20:14:43,621:INFO:          ipywidgets: 8.1.1
+2023-12-30 20:14:43,621:INFO:                tqdm: 4.65.0
+2023-12-30 20:14:43,621:INFO:               numpy: 1.23.2
+2023-12-30 20:14:43,621:INFO:              pandas: 1.5.3
+2023-12-30 20:14:43,621:INFO:              jinja2: 3.1.2
+2023-12-30 20:14:43,621:INFO:               scipy: 1.10.1
+2023-12-30 20:14:43,621:INFO:              joblib: 1.3.2
+2023-12-30 20:14:43,621:INFO:             sklearn: 1.2.2
+2023-12-30 20:14:43,621:INFO:                pyod: 1.1.2
+2023-12-30 20:14:43,621:INFO:            imblearn: 0.11.0
+2023-12-30 20:14:43,621:INFO:   category_encoders: 2.6.3
+2023-12-30 20:14:43,621:INFO:            lightgbm: 4.2.0
+2023-12-30 20:14:43,621:INFO:               numba: 0.57.0
+2023-12-30 20:14:43,621:INFO:            requests: 2.28.1
+2023-12-30 20:14:43,621:INFO:          matplotlib: 3.6.0
+2023-12-30 20:14:43,621:INFO:          scikitplot: 0.3.7
+2023-12-30 20:14:43,621:INFO:         yellowbrick: 1.5
+2023-12-30 20:14:43,621:INFO:              plotly: 5.18.0
+2023-12-30 20:14:43,621:INFO:    plotly-resampler: Not installed
+2023-12-30 20:14:43,621:INFO:             kaleido: 0.2.1
+2023-12-30 20:14:43,621:INFO:           schemdraw: 0.15
+2023-12-30 20:14:43,622:INFO:         statsmodels: 0.14.0
+2023-12-30 20:14:43,622:INFO:              sktime: 0.21.1
+2023-12-30 20:14:43,622:INFO:               tbats: 1.1.3
+2023-12-30 20:14:43,622:INFO:            pmdarima: 2.0.4
+2023-12-30 20:14:43,622:INFO:              psutil: 5.9.3
+2023-12-30 20:14:43,622:INFO:          markupsafe: 2.1.1
+2023-12-30 20:14:43,622:INFO:             pickle5: Not installed
+2023-12-30 20:14:43,622:INFO:         cloudpickle: 3.0.0
+2023-12-30 20:14:43,622:INFO:         deprecation: 2.1.0
+2023-12-30 20:14:43,622:INFO:              xxhash: 3.4.1
+2023-12-30 20:14:43,622:INFO:           wurlitzer: 3.0.3
+2023-12-30 20:14:43,622:INFO:PyCaret optional dependencies:
+2023-12-30 20:14:43,628:INFO:                shap: Not installed
+2023-12-30 20:14:43,628:INFO:           interpret: Not installed
+2023-12-30 20:14:43,628:INFO:                umap: Not installed
+2023-12-30 20:14:43,628:INFO:     ydata_profiling: Not installed
+2023-12-30 20:14:43,628:INFO:  explainerdashboard: Not installed
+2023-12-30 20:14:43,628:INFO:             autoviz: Not installed
+2023-12-30 20:14:43,628:INFO:           fairlearn: Not installed
+2023-12-30 20:14:43,628:INFO:          deepchecks: Not installed
+2023-12-30 20:14:43,628:INFO:             xgboost: Not installed
+2023-12-30 20:14:43,628:INFO:            catboost: Not installed
+2023-12-30 20:14:43,628:INFO:              kmodes: Not installed
+2023-12-30 20:14:43,628:INFO:             mlxtend: Not installed
+2023-12-30 20:14:43,628:INFO:       statsforecast: Not installed
+2023-12-30 20:14:43,628:INFO:        tune_sklearn: Not installed
+2023-12-30 20:14:43,628:INFO:                 ray: Not installed
+2023-12-30 20:14:43,628:INFO:            hyperopt: Not installed
+2023-12-30 20:14:43,628:INFO:              optuna: Not installed
+2023-12-30 20:14:43,628:INFO:               skopt: Not installed
+2023-12-30 20:14:43,628:INFO:              mlflow: Not installed
+2023-12-30 20:14:43,628:INFO:              gradio: Not installed
+2023-12-30 20:14:43,628:INFO:             fastapi: Not installed
+2023-12-30 20:14:43,628:INFO:             uvicorn: Not installed
+2023-12-30 20:14:43,628:INFO:              m2cgen: Not installed
+2023-12-30 20:14:43,628:INFO:           evidently: Not installed
+2023-12-30 20:14:43,628:INFO:               fugue: Not installed
+2023-12-30 20:14:43,628:INFO:           streamlit: Not installed
+2023-12-30 20:14:43,628:INFO:             prophet: Not installed
+2023-12-30 20:14:43,628:INFO:None
+2023-12-30 20:14:43,628:INFO:Set up data.
+2023-12-30 20:14:43,832:INFO:Set up folding strategy.
+2023-12-30 20:14:43,832:INFO:Set up train/test split.
+2023-12-30 20:14:43,914:INFO:Set up index.
+2023-12-30 20:14:43,916:INFO:Assigning column types.
+2023-12-30 20:14:43,951:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2023-12-30 20:14:43,971:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-12-30 20:14:43,973:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:14:43,989:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:43,989:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,010:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-12-30 20:14:44,010:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:14:44,023:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,023:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,023:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2023-12-30 20:14:44,043:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:14:44,056:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,056:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,077:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2023-12-30 20:14:44,090:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,090:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,090:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2023-12-30 20:14:44,123:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,123:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,158:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,158:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,160:INFO:Preparing preprocessing pipeline...
+2023-12-30 20:14:44,163:INFO:Set up label encoding.
+2023-12-30 20:14:44,163:INFO:Set up simple imputation.
+2023-12-30 20:14:44,184:INFO:Set up encoding of ordinal features.
+2023-12-30 20:14:44,337:INFO:Set up encoding of categorical features.
+2023-12-30 20:14:44,339:INFO:Set up feature selection.
+2023-12-30 20:14:44,372:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:44,373:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:47,517:INFO:Finished creating preprocessing pipeline.
+2023-12-30 20:14:47,746:INFO:Pipeline: Pipeline(memory=FastMemory(location=/var/folders/s1/rlnl0y2n1lx7qbyjpc6xfnnr0000gn/T/joblib),
+         steps=[('label_encoding',
+                 TransformerWrapperWithInverse(exclude=None, include=None,
+                                               transformer=LabelEncoder())),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['EEDUC', 'THHLD_NUMPER',
+                                             'THHLD_NUMKID', 'THHLD_NUMADLT',
+                                             'TENROLLPUB', 'TENROLLPRV',
+                                             'TENR...
+                                                                                         learning_rate=0.1,
+                                                                                         max_depth=-1,
+                                                                                         min_child_samples=20,
+                                                                                         min_child_weight=0.001,
+                                                                                         min_split_gain=0.0,
+                                                                                         n_estimators=100,
+                                                                                         n_jobs=None,
+                                                                                         num_leaves=31,
+                                                                                         objective=None,
+                                                                                         random_state=None,
+                                                                                         reg_alpha=0.0,
+                                                                                         reg_lambda=0.0,
+                                                                                         subsample=1.0,
+                                                                                         subsample_for_bin=200000,
+                                                                                         subsample_freq=0),
+                                                                importance_getter='auto',
+                                                                max_features=14,
+                                                                norm_order=1,
+                                                                prefit=False,
+                                                                threshold=-inf)))],
+         verbose=False)
+2023-12-30 20:14:47,746:INFO:Creating final display dataframe.
+2023-12-30 20:14:49,393:INFO:Setup _display_container:                     Description                                            Value
+0                    Session id                                              123
+1                        Target                             transgender_identity
+2                   Target type                                       Multiclass
+3                Target mapping  no: 0, non_binary_female: 1, trans_id_female: 2
+4           Original data shape                                     (44492, 249)
+5        Transformed data shape                                      (44492, 15)
+6   Transformed train set shape                                      (31144, 15)
+7    Transformed test set shape                                      (13348, 15)
+8               Ignore features                                              178
+9              Ordinal features                                               32
+10             Numeric features                                               24
+11         Categorical features                                               46
+12     Rows with missing values                                           100.0%
+13                   Preprocess                                             True
+14              Imputation type                                           simple
+15           Numeric imputation                                             mean
+16       Categorical imputation                                             mode
+17     Maximum one-hot encoding                                               25
+18              Encoding method                                             None
+19            Feature selection                                             True
+20     Feature selection method                                          classic
+21  Feature selection estimator                                         lightgbm
+22  Number of features selected                                              0.2
+23               Fold Generator                                  StratifiedKFold
+24                  Fold Number                                               10
+25                     CPU Jobs                                               -1
+26                      Use GPU                                            False
+27               Log Experiment                                            False
+28              Experiment Name                                 clf-default-name
+29                          USI                                             63b2
+2023-12-30 20:14:49,430:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:49,430:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:49,464:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:49,464:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-12-30 20:14:49,464:INFO:setup() successfully completed in 5.93s...............
+2023-12-30 20:14:49,464:INFO:Initializing create_model()
+2023-12-30 20:14:49,464:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x104338df0>, estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2023-12-30 20:14:49,464:INFO:Checking exceptions
+2023-12-30 20:14:49,484:INFO:Importing libraries
+2023-12-30 20:14:49,484:INFO:Copying training dataset
+2023-12-30 20:14:49,506:INFO:Defining folds
+2023-12-30 20:14:49,506:INFO:Declaring metric variables
+2023-12-30 20:14:49,506:INFO:Importing untrained model
+2023-12-30 20:14:49,506:INFO:Logistic Regression Imported successfully
+2023-12-30 20:14:49,507:INFO:Starting cross validation
+2023-12-30 20:14:49,522:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-12-30 20:15:08,907:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:08,918:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:08,949:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:08,966:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:08,970:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,006:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,024:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:09,029:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,036:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,046:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,048:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,058:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,063:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:09,064:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:09,067:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,069:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,279:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,290:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,294:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,297:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:09,301:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,304:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,311:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:09,315:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,394:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,405:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,411:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:09,416:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,454:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,465:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:09,471:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:09,476:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:10,307:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:10,317:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:10,322:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:10,326:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:10,752:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:10,762:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:10,768:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-12-30 20:15:10,771:WARNING:/Users/admin/.pyenv/versions/3.9.4/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1396: UserWarning: Note that pos_label (set to 'trans_id_female') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2023-12-30 20:15:10,901:INFO:Calculating mean and std
+2023-12-30 20:15:10,903:INFO:Creating metrics dataframe
+2023-12-30 20:15:10,907:INFO:Finalizing model
+2023-12-30 20:15:11,806:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2023-12-30 20:15:11,914:INFO:[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.006649 seconds.
+2023-12-30 20:15:11,914:INFO:You can set `force_row_wise=true` to remove the overhead.
+2023-12-30 20:15:11,914:INFO:And if memory is not enough, you can set `force_col_wise=true`.
+2023-12-30 20:15:11,914:INFO:[LightGBM] [Info] Total Bins 482
+2023-12-30 20:15:11,914:INFO:[LightGBM] [Info] Number of data points in the train set: 31144, number of used features: 138
+2023-12-30 20:15:11,915:INFO:[LightGBM] [Info] Start training from score -0.017524
+2023-12-30 20:15:11,915:INFO:[LightGBM] [Info] Start training from score -4.367491
+2023-12-30 20:15:11,915:INFO:[LightGBM] [Info] Start training from score -5.362770
+2023-12-30 20:15:18,229:INFO:Uploading results into container
+2023-12-30 20:15:18,229:INFO:Uploading model into container now
+2023-12-30 20:15:18,234:INFO:_master_model_container: 1
+2023-12-30 20:15:18,235:INFO:_display_container: 2
+2023-12-30 20:15:18,235:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2023-12-30 20:15:18,235:INFO:create_model() successfully completed......................................
+2023-12-30 20:15:18,340:INFO:Initializing get_config()
+2023-12-30 20:15:18,340:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x104338df0>, variable=X_transformed)
+2023-12-30 20:15:18,520:INFO:Variable: X returned as        EST_ST  EEDUC  THHLD_NUMPER  THHLD_NUMADLT  CURFOODSUF  ANXIOUS  WORRY  INTEREST  SEEING  HEARING  REMEMBERING  ENERGY  INCOME   age
+176      49.0    3.0           3.0            2.0         1.0      0.0    1.0       0.0     0.0      0.0          0.0     3.0     1.0  63.0
+76211    48.0    3.0           2.0            2.0         1.0     -1.0   -1.0      -1.0    -1.0     -1.0         -1.0    -1.0    -1.0  68.0
+54302    29.0    5.0           3.0            3.0         1.0      0.0    0.0       1.0     0.0      0.0          0.0    -1.0    -1.0  68.0
+71232    49.0    5.0           7.0            6.0         1.0      2.0    2.0       2.0     1.0      2.0          0.0     2.0     1.0  62.0
+55620    26.0    6.0           4.0            3.0         2.0      3.0    3.0       3.0     1.0      3.0          2.0     0.0     4.0  42.0
+...       ...    ...           ...            ...         ...      ...    ...       ...     ...      ...          ...     ...     ...   ...
+77357    20.0    3.0           2.0            1.0        -1.0     -1.0   -1.0      -1.0    -1.0     -1.0         -1.0    -1.0    -1.0  39.0
+52136    12.0    1.0           2.0            2.0         1.0      1.0    1.0       1.0     1.0      2.0          1.0     3.0     2.0  84.0
+50565    27.0    6.0           3.0            1.0         1.0      3.0    3.0       3.0     0.0      0.0          2.0     3.0     3.0  49.0
+69937    21.0    6.0           2.0            2.0         0.0      1.0    1.0       0.0     1.0      0.0          0.0     2.0     6.0  54.0
+68190    45.0    4.0           2.0            2.0        -1.0     -1.0   -1.0      -1.0    -1.0     -1.0         -1.0    -1.0    -1.0  68.0
+
+[44492 rows x 14 columns]
+2023-12-30 20:15:18,520:INFO:get_config() successfully completed......................................
+2024-01-01 10:58:47,007:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 10:58:47,008:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 10:58:47,008:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 10:58:47,008:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 10:59:24,746:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 10:59:24,746:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 10:59:24,746:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 10:59:24,746:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 11:00:53,512:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 11:00:53,512:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 11:00:53,512:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 11:00:53,512:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-01-01 11:00:55,830:INFO:PyCaret ClassificationExperiment
+2024-01-01 11:00:55,830:INFO:Logging name: clf-default-name
+2024-01-01 11:00:55,830:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2024-01-01 11:00:55,830:INFO:version 3.2.0
+2024-01-01 11:00:55,830:INFO:Initializing setup()
+2024-01-01 11:00:55,830:INFO:self.USI: bae6
+2024-01-01 11:00:55,830:INFO:self._variable_keys: {'memory', 'fix_imbalance', 'data', '_available_plots', 'X', 'y_test', 'gpu_param', 'is_multiclass', 'exp_id', 'X_train', 'pipeline', 'seed', 'logging_param', 'idx', 'X_test', 'USI', '_ml_usecase', 'y', 'target_param', 'exp_name_log', 'fold_groups_param', 'gpu_n_jobs_param', 'n_jobs_param', 'y_train', 'html_param', 'fold_shuffle_param', 'log_plots_param', 'fold_generator'}
+2024-01-01 11:00:55,830:INFO:Checking environment
+2024-01-01 11:00:55,830:INFO:python_version: 3.9.4
+2024-01-01 11:00:55,830:INFO:python_build: ('default', 'Jan  7 2022 20:05:31')
+2024-01-01 11:00:55,830:INFO:machine: arm64
+2024-01-01 11:00:55,867:INFO:platform: macOS-14.1.2-arm64-arm-64bit
+2024-01-01 11:00:55,867:INFO:Memory: svmem(total=17179869184, available=2675326976, percent=84.4, used=5672763392, free=30523392, active=2655780864, inactive=2566209536, wired=3016982528)
+2024-01-01 11:00:55,867:INFO:Physical Core: 10
+2024-01-01 11:00:55,867:INFO:Logical Core: 10
+2024-01-01 11:00:55,867:INFO:Checking libraries
+2024-01-01 11:00:55,867:INFO:System:
+2024-01-01 11:00:55,867:INFO:    python: 3.9.4 (default, Jan  7 2022, 20:05:31)  [Clang 13.0.0 (clang-1300.0.29.30)]
+2024-01-01 11:00:55,867:INFO:executable: /Users/admin/.pyenv/versions/3.9.4/bin/python
+2024-01-01 11:00:55,867:INFO:   machine: macOS-14.1.2-arm64-arm-64bit
+2024-01-01 11:00:55,867:INFO:PyCaret required dependencies:
+2024-01-01 11:00:55,919:INFO:                 pip: 21.3.1
+2024-01-01 11:00:55,919:INFO:          setuptools: 49.2.1
+2024-01-01 11:00:55,919:INFO:             pycaret: 3.2.0
+2024-01-01 11:00:55,919:INFO:             IPython: 8.6.0
+2024-01-01 11:00:55,919:INFO:          ipywidgets: 8.1.1
+2024-01-01 11:00:55,919:INFO:                tqdm: 4.65.0
+2024-01-01 11:00:55,919:INFO:               numpy: 1.23.2
+2024-01-01 11:00:55,919:INFO:              pandas: 1.5.3
+2024-01-01 11:00:55,919:INFO:              jinja2: 3.1.2
+2024-01-01 11:00:55,919:INFO:               scipy: 1.10.1
+2024-01-01 11:00:55,919:INFO:              joblib: 1.3.2
+2024-01-01 11:00:55,919:INFO:             sklearn: 1.2.2
+2024-01-01 11:00:55,919:INFO:                pyod: 1.1.2
+2024-01-01 11:00:55,919:INFO:            imblearn: 0.11.0
+2024-01-01 11:00:55,919:INFO:   category_encoders: 2.6.3
+2024-01-01 11:00:55,919:INFO:            lightgbm: 4.2.0
+2024-01-01 11:00:55,919:INFO:               numba: 0.57.0
+2024-01-01 11:00:55,919:INFO:            requests: 2.28.1
+2024-01-01 11:00:55,919:INFO:          matplotlib: 3.6.0
+2024-01-01 11:00:55,919:INFO:          scikitplot: 0.3.7
+2024-01-01 11:00:55,919:INFO:         yellowbrick: 1.5
+2024-01-01 11:00:55,919:INFO:              plotly: 5.18.0
+2024-01-01 11:00:55,919:INFO:    plotly-resampler: Not installed
+2024-01-01 11:00:55,919:INFO:             kaleido: 0.2.1
+2024-01-01 11:00:55,919:INFO:           schemdraw: 0.15
+2024-01-01 11:00:55,919:INFO:         statsmodels: 0.14.0
+2024-01-01 11:00:55,919:INFO:              sktime: 0.21.1
+2024-01-01 11:00:55,919:INFO:               tbats: 1.1.3
+2024-01-01 11:00:55,919:INFO:            pmdarima: 2.0.4
+2024-01-01 11:00:55,919:INFO:              psutil: 5.9.3
+2024-01-01 11:00:55,919:INFO:          markupsafe: 2.1.1
+2024-01-01 11:00:55,919:INFO:             pickle5: Not installed
+2024-01-01 11:00:55,919:INFO:         cloudpickle: 3.0.0
+2024-01-01 11:00:55,919:INFO:         deprecation: 2.1.0
+2024-01-01 11:00:55,919:INFO:              xxhash: 3.4.1
+2024-01-01 11:00:55,919:INFO:           wurlitzer: 3.0.3
+2024-01-01 11:00:55,919:INFO:PyCaret optional dependencies:
+2024-01-01 11:00:55,928:INFO:                shap: Not installed
+2024-01-01 11:00:55,928:INFO:           interpret: Not installed
+2024-01-01 11:00:55,928:INFO:                umap: Not installed
+2024-01-01 11:00:55,928:INFO:     ydata_profiling: Not installed
+2024-01-01 11:00:55,928:INFO:  explainerdashboard: Not installed
+2024-01-01 11:00:55,928:INFO:             autoviz: Not installed
+2024-01-01 11:00:55,928:INFO:           fairlearn: Not installed
+2024-01-01 11:00:55,928:INFO:          deepchecks: Not installed
+2024-01-01 11:00:55,928:INFO:             xgboost: Not installed
+2024-01-01 11:00:55,928:INFO:            catboost: Not installed
+2024-01-01 11:00:55,928:INFO:              kmodes: Not installed
+2024-01-01 11:00:55,928:INFO:             mlxtend: Not installed
+2024-01-01 11:00:55,928:INFO:       statsforecast: Not installed
+2024-01-01 11:00:55,928:INFO:        tune_sklearn: Not installed
+2024-01-01 11:00:55,928:INFO:                 ray: Not installed
+2024-01-01 11:00:55,928:INFO:            hyperopt: Not installed
+2024-01-01 11:00:55,928:INFO:              optuna: Not installed
+2024-01-01 11:00:55,928:INFO:               skopt: Not installed
+2024-01-01 11:00:55,928:INFO:              mlflow: Not installed
+2024-01-01 11:00:55,928:INFO:              gradio: Not installed
+2024-01-01 11:00:55,928:INFO:             fastapi: Not installed
+2024-01-01 11:00:55,928:INFO:             uvicorn: Not installed
+2024-01-01 11:00:55,928:INFO:              m2cgen: Not installed
+2024-01-01 11:00:55,928:INFO:           evidently: Not installed
+2024-01-01 11:00:55,928:INFO:               fugue: Not installed
+2024-01-01 11:00:55,928:INFO:           streamlit: Not installed
+2024-01-01 11:00:55,928:INFO:             prophet: Not installed
+2024-01-01 11:00:55,928:INFO:None
+2024-01-01 11:00:55,928:INFO:Set up data.
+2024-01-01 11:00:55,950:INFO:Set up folding strategy.
+2024-01-01 11:00:55,951:INFO:Set up train/test split.

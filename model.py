@@ -2,25 +2,11 @@ import numpy as np
 import pandas as pd
 import pickle
 import re
-from sklearn.impute import SimpleImputer
 import statsmodels.api as sm
 from utils import set_target
 from prepare_df import prepare_df
+import file_names as fn
 
-mf = 2
-ID = "trans"
-year = 2023
-number = 58
-
-df = pd.read_csv(f"./data/pulse{year}_puf_{number}.csv")
-
-features = pd.read_csv(f"./results/{year}_{number}_sex-{mf}_trans_nb_features.csv")
-features = features[abs(features['Importance']) > 0.05]
-features = ['_'.join([part for part in re.split('(?=\d)', x)[0].split('_') if part]) for x in features['Feature']]
-features = list(set(features)) + ["age"]
-# features.remove("ACTIVITY")
-
-X, y = prepare_df(df, features, mf, ID, year)
 
 def recursive_feature_elimination_aic(X, y):
     features = X.columns.tolist()
@@ -57,17 +43,28 @@ def recursive_feature_elimination_aic(X, y):
     return sm.Logit(y, sm.add_constant(X[best_features])).fit(disp=0), best_features
 
 
-model, best_features = recursive_feature_elimination_aic(X, y)
-model_summary = model.summary2().as_text()
+def run_model(sex, id, year, number, universal):
+    df = pd.read_csv(f"./data/pulse{year}_puf_{number}.csv")
+    feature_file = fn.features_path(sex, id, year, number, universal)
+    features = pd.read_csv(feature_file)
+    features = features[abs(features['Importance']) > 0.05]
+    features = ['_'.join([part for part in re.split('(?=\d)', x)[0].split('_') if part]) for x in features['Feature']]
+    features = list(set(features))
 
-print(model_summary)
+    X, y = prepare_df(df, features, mf, ID, year)
+    model, best_features = recursive_feature_elimination_aic(X, y)
+    model_summary = model.summary2().as_text()
+    print(model_summary)
 
+    model_summary_path = fn.model_summary_path(sex, id, year, number, universal)
 
-with open(f"./results/model_{mf}_{ID}_{year}_{number}.txt", 'w') as file:
-    file.write(model_summary)
+    with open(model_summary_path, 'w') as file:
+        file.write(model_summary)
 
-with open(f"./models/sex-{mf}_{ID}_{year}_{number}.pkl", 'wb') as file:
-    pickle.dump(model, file)
+    model_path = fn.model_path(sex, id, year, universal)
+
+    with open(model_path, 'wb') as file:
+        pickle.dump(model, file)
 
 
 

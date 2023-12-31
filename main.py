@@ -17,8 +17,6 @@ def n(df):
     return df.shape[0]
 
 
-
-
 index = pd.read_csv(f"./data/index.csv")
 stats = []
 upper = 24
