@@ -42,6 +42,7 @@ def select_features(sex, id, year, number, universal):
     print(unique_value_counts)
 
     df["age"] = year - df["TBIRTH_YEAR"]
+    all_columns = df.columns.tolist()
 
     numerical_columns = [
             "age",
@@ -55,7 +56,7 @@ def select_features(sex, id, year, number, universal):
             "TSPNDPRPD",
             ]
 
-    numerical_columns = [x for x in numerical_columns if x not in not_universal]
+    numerical_columns = [x for x in numerical_columns if x not in not_universal and x in all_columns]
 
     ordinal_columns = [
             "EEDUC",
@@ -79,7 +80,7 @@ def select_features(sex, id, year, number, universal):
             "INCOME"
             ]
 
-    ordinal_columns = [x for x in ordinal_columns if x not in not_universal]
+    ordinal_columns = [x for x in ordinal_columns if x not in not_universal and x in all_columns]
 
     ordinal = {
             "EEDUC": [1, 2, 3, 4, 5, 6, 7],
@@ -103,7 +104,7 @@ def select_features(sex, id, year, number, universal):
             "INCOME": [1, 2, 3, 4, 5, 6, 7, 8]
             }
 
-    ordinal = {key: ordinal[key] for key in ordinal if key not in not_universal}
+    ordinal = {key: ordinal[key] for key in ordinal if key not in not_universal and key in all_columns}
 
     exclude_cols = [
             "TBIRTH_YEAR",
@@ -122,14 +123,13 @@ def select_features(sex, id, year, number, universal):
             "WEEK"
             ]
 
-    all_columns = df.columns.tolist()
     categorical_columns = [col for col in all_columns if col != target and (col not in numerical_columns) and (col not in exclude_cols) and (col not in ordinal_columns) and (col not in not_universal)]
     exclude = [x for x in all_columns if x in not_universal]
     exclude = exclude_cols + exclude
 
     print(categorical_columns)
 
-    data = df[df["EGENID_BIRTH"] == sex]
+    data = df[df["EGENID_BIRTH"] == int(sex)]
 
     s = setup(
             data=data, 

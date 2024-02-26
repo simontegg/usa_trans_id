@@ -1,10 +1,10 @@
-from enum import Enum
+from enum import IntEnum
 
-class Sex(Enum):
+class Sex(IntEnum):
     Male = 1
     Female = 2
 
-class Id(Enum):
+class Id(IntEnum):
     Trans = 1 # OppositeSex + Transgender
     NonBinary = 2
     OppositeSex = 3
@@ -30,10 +30,10 @@ def model_path(sex, id, year, number, universal):
 def features_path(sex, id, year, number, universal):
     mf = "male" if sex == Sex.Male else "female"
     u = "universal" if universal else "survey"
-    return f"./results/{mf}_{get_id(id)}_{year}_{number}_{universal}_features.csv"
+    return f"./results/{mf}_{get_id(id)}_{year}_{number}_{u}_features.csv"
 
 
 def model_summary_path(sex, id, year, number, universal):
     mf = "male" if sex == Sex.Male else "female"
     u = "universal" if universal else "survey"
-    return f"./results/model_{mf}_{get_id(id)}_{year}_{number}_{universal}.txt"
+    return f"./results/model_{mf}_{get_id(id)}_{year}_{number}_{u}.txt"
